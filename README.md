@@ -28,7 +28,7 @@ def sample_job_every_5s():
     print "5s job current time : {}".format(time.ctime())
 
 
-@tl.job(interval=timedelta(seconds=10))
+@tl.job(interval=timedelta(seconds=10), run_on_start=True)
 def sample_job_every_10s():
     print "10s job current time : {}".format(time.ctime())
 ```
